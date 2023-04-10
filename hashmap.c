@@ -53,9 +53,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   {
     index++;
     insertMap(map, (char *) &index, value);
-
   }
-  return;
 }
 
 void enlarge(HashMap * map) {
