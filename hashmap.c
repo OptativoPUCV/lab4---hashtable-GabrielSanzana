@@ -52,7 +52,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   else
   {
     index++;
-    insertMap(map, (char *) index, value);
+    insertMap(map, (char *) &index, value);
 
   }
   return;
