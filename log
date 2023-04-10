@@ -148,3 +148,14 @@ Mon 10 Apr 2023 10:21:48 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 330899a
+Mon 10 Apr 2023 10:22:17 PM UTC: 
+ hashmap.c | 23 +++++++++++------------
+ 1 file changed, 11 insertions(+), 12 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:20: error: implicit declaration of function ‘containsKey’ [-Werror=implicit-function-declaration]
+   43 |  if(key == NULL || containsKey(map, key)) // Verificar que la clave no sea nula y no esté repetida
+      |                    ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0e2b36b
