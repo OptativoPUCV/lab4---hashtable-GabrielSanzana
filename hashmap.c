@@ -42,16 +42,16 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) {
   if(key==NULL)
     return;
-
-  if(map->buckets[ (long) key % map->capacity]->value == NULL) 
-    map->buckets[ (long) key % map->capacity] = createPair(key, value);
+  long hash = (long) key % map->capacity;
+  if(map->buckets[hash]->value == NULL) 
+    map->buckets[hash] = createPair(key, value);
   else
   {
     key++;
     insertMap(map,key, value);
   }
   map->size++;
-  map->current = (long) (key) % map->capacity;
+  map->current = hash;
   return;
 }
 
