@@ -51,7 +51,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   }
   else
   {
-    index = (index + 1) % map->capacity;
+    index++;
     insertMap(map, (char *) index, value);
 
   }
