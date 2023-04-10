@@ -40,9 +40,10 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
-  puts(key);
+  if(key==NULL)
+    return;
   size_t index = hash(key, map->capacity);
-  if( (key==NULL) || (map->buckets[index] !=NULL && map->buckets[index]->key != NULL && strcmp(map->buckets[index]->key, key) == 0) )
+  if((map->buckets[index] !=NULL && map->buckets[index]->key != NULL && strcmp(map->buckets[index]->key, key) == 0) )
     return;
   if(map->buckets[index] == NULL) 
   {
