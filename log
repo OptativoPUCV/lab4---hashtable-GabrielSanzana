@@ -98,3 +98,9 @@ hashmap.c:54:16: error: assignment to ‘long int’ from ‘long int (*)(char *
 cc1: all warnings being treated as errors
 Compilation failed
 475ec61
+Mon 10 Apr 2023 09:52:17 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|5
+total_score: 20/70
+a83e4f5
