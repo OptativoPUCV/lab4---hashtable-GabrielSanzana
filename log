@@ -159,3 +159,8 @@ hashmap.c:43:20: error: implicit declaration of function ‘containsKey’ [-Wer
 cc1: all warnings being treated as errors
 Compilation failed
 0e2b36b
+Mon 10 Apr 2023 10:23:39 PM UTC: 
+ hashmap.c | 23 ++++++++++++-----------
+ 1 file changed, 12 insertions(+), 11 deletions(-)
+ tests:  0|0
+a4fe440
