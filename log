@@ -61,3 +61,16 @@ Mon 10 Apr 2023 09:40:43 PM UTC:
  tests:  1|5
 total_score: 10/70
 c222f48
+Mon 10 Apr 2023 09:46:21 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:45:15: error: called object ‘hash’ is not a function or function pointer
+   45 |   long hash = hash((char *) key,map->capacity);
+      |               ^~~~
+hashmap.c:45:8: note: declared here
+   45 |   long hash = hash((char *) key,map->capacity);
+      |        ^~~~
+Compilation failed
+dcf258b
