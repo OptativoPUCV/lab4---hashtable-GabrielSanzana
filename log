@@ -87,3 +87,14 @@ hashmap.c:45:8: note: declared here
       |        ^~~~
 Compilation failed
 fbc294c
+Mon 10 Apr 2023 09:50:45 PM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:54:16: error: assignment to ‘long int’ from ‘long int (*)(char *, long int)’ makes integer from pointer without a cast [-Werror=int-conversion]
+   54 |   map->current = hash;
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+475ec61
