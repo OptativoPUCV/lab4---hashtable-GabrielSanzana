@@ -182,3 +182,17 @@ Mon 10 Apr 2023 10:38:55 PM UTC:
  tests:  5|4
 total_score: 30/70
 db71d31
+Tue 11 Apr 2023 10:58:45 PM UTC: 
+ hashmap.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:87:4: error: this ‘while’ clause does not guard... [-Werror=misleading-indentation]
+   87 |    while(map->buckets[index]!=NULL)
+      |    ^~~~~
+hashmap.c:101:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+  101 |     return NULL;
+      |     ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0afbc59
