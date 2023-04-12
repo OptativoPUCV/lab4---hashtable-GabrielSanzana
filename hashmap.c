@@ -75,7 +75,20 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) {    
-
+  if(map==NULL || key == NULL)
+      return;
+  size_t index = hash(key, map->capacity);
+   while(map->buckets[index]!=NULL)
+   {
+    if (map->buckets[index] != NULL) {
+        if (strcmp(map->buckets[index]->key, key) == 0) {
+          map->buckets[index]->key=NULL;
+        }
+    }
+    index = (index + 1) % map->capacity;
+    if(index == map->current)
+      return; 
+   }
 
 }
 
