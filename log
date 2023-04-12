@@ -214,3 +214,18 @@ Wed 12 Apr 2023 06:34:11 PM UTC:
  tests:  11|2
 total_score: 50/70
 ecf09ba
+Wed 12 Apr 2023 06:49:42 PM UTC: 
+ hashmap.c | 20 ++++++++++++--------
+ 1 file changed, 12 insertions(+), 8 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:105:10: error: unused variable ‘index_inicial’ [-Werror=unused-variable]
+  105 |   size_t index_inicial = index;
+      |          ^~~~~~~~~~~~~
+hashmap.c: In function ‘insertMap’:
+hashmap.c:52:20: error: ‘index’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   52 |     size_t index = hash((char *) index, map->capacity);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0475ec4
