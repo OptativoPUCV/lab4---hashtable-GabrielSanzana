@@ -117,7 +117,7 @@ Pair * firstMap(HashMap * map) {
     if(map==NULL)
       return NULL;
     for(size_t indice = 0; indice<=map->capacity ; indice++)
-      if(map->buckets[indice]!=NULL)
+      if(map->buckets[indice]!=NULL && map->buckets[indice]->key !=NULL)
         return map->buckets[indice];
   
     return NULL;
