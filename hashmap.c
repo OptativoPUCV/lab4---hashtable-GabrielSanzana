@@ -101,21 +101,19 @@ Pair * searchMap(HashMap * map,  char * key) {
       return NULL;
   
   size_t index = hash(key, map->capacity);
+  size_t index_inicial = index;
   
-   while(map->buckets[index]!=NULL)
+   while(map->buckets[index]!=NULL && map->buckets[index]->key != NULL && strcmp(map->buckets[index]->key, key) != 0) 
    {
-    if (map->buckets[index] != NULL) {
-        if (strcmp(map->buckets[index]->key, key) == 0) {
-          map->current = index;
-          return map->buckets[index];
-        }
-    }
-    index = (index + 1) % map->capacity;
-    if(index == map->current)
-      return NULL; 
+      index = (index + 1) % map->capacity;
+      if (index == index_inicial)
+        return NULL;
    }
-  return NULL;
+
+    map->current = index;
+    return map->buckets[index];
 }
+
 Pair * firstMap(HashMap * map) {
 
     return NULL;
