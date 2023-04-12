@@ -85,22 +85,19 @@ Pair * searchMap(HashMap * map,  char * key) {
   
     size_t index = hash(key, map->capacity);
    while(map->buckets[index]!=NULL)
+   {
     if (map->buckets[index] != NULL) {
         if (strcmp(map->buckets[index]->key, key) == 0) {
           map->current = index;
           return map->buckets[index];
         }
     }
-    else
-    {
-      index++;
-      if(index == map->current)
-        return NULL;
-    } 
-    
-    return NULL;
+    index = (index + 1) % map->capacity;
+    if(index == map->current)
+      return NULL; 
+   }
+  return NULL;
 }
-
 Pair * firstMap(HashMap * map) {
 
     return NULL;
