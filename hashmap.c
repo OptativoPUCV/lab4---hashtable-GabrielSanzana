@@ -102,7 +102,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   
   size_t index = hash(key, map->capacity);
   
-   while(map->buckets[index]!=NULL && map->buckets[index]->key != NULL && strcmp(map->buckets[index]->key, key) != 0) 
+   while(map->buckets[index]!=NULL && strcmp(map->buckets[index]->key, key) != 0) 
    {
       index = (index + 1) % map->capacity;
       if (index == hash(key, map->capacity))
