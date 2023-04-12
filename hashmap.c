@@ -44,12 +44,11 @@ void insertMap(HashMap * map, char * key, void * value) {
     return;
   
   size_t index = hash(key, map->capacity);
-  size_t index_inicial = index;
   
   while (map->buckets[index] != NULL && map->buckets[index]->key != NULL && strcmp(map->buckets[index]->key, key) != 0) 
   {
     index = (index + 1) % map->capacity;
-    if (index == index_inicial)
+    if (index == hash(key, map->capacity))
       return;
   }
   if (map->buckets[index] == NULL || map->buckets[index]->key == NULL) 
@@ -82,10 +81,11 @@ void eraseMap(HashMap * map,  char * key) {
   
   size_t index = hash(key, map->capacity);
   size_t index_inicial = index;
-  while(map->buckets[index]!=NULL && map->buckets[index]->key != NULL && strcmp(map->buckets[index]->key, key) != 0) 
+  
+  while(map->buckets[index]!=NULL && strcmp(map->buckets[index]->key, key) != 0) 
   {
      index = (index + 1) % map->capacity;
-     if (index == index_inicial)
+     if (index == hash(key, map->capacity))
       return;
   }
   map->buckets[index]->key=NULL;
@@ -98,12 +98,11 @@ Pair * searchMap(HashMap * map,  char * key) {
       return NULL;
   
   size_t index = hash(key, map->capacity);
-  size_t index_inicial = index;
   
    while(map->buckets[index]!=NULL && map->buckets[index]->key != NULL && strcmp(map->buckets[index]->key, key) != 0) 
    {
       index = (index + 1) % map->capacity;
-      if (index == index_inicial)
+      if (index == hash(key, map->capacity))
         return NULL;
    }
 

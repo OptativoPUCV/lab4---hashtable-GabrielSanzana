@@ -262,3 +262,14 @@ Wed 12 Apr 2023 07:03:03 PM UTC:
  1 file changed, 7 insertions(+), 10 deletions(-)
  tests:  0|0
 90dc8a0
+Wed 12 Apr 2023 07:07:17 PM UTC: 
+ hashmap.c | 11 +++++------
+ 1 file changed, 5 insertions(+), 6 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:83:10: error: unused variable ‘index_inicial’ [-Werror=unused-variable]
+   83 |   size_t index_inicial = index;
+      |          ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4c47299
