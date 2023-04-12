@@ -118,8 +118,10 @@ Pair * firstMap(HashMap * map) {
       return NULL;
     for(size_t indice = 0; indice<=map->capacity ; indice++)
       if(map->buckets[indice]!=NULL && map->buckets[indice]->key !=NULL)
+      {
+        map->current = indice;
         return map->buckets[indice];
-  
+      }
     return NULL;
 }
 
