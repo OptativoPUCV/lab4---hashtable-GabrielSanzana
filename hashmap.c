@@ -116,7 +116,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 Pair * firstMap(HashMap * map) {
     if(map==NULL)
       return NULL;
-    for(size_t indice = 0; indice<map->capacity ; indice++)
+    for(size_t indice = 0; indice<=map->capacity ; indice++)
       if(map->buckets[indice]!=NULL)
         return map->buckets[indice];
   
