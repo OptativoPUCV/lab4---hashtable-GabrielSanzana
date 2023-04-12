@@ -273,3 +273,8 @@ hashmap.c:83:10: error: unused variable ‘index_inicial’ [-Werror=unused-vari
 cc1: all warnings being treated as errors
 Compilation failed
 4c47299
+Wed 12 Apr 2023 07:07:32 PM UTC: 
+ hashmap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  0|0
+f97c2c2

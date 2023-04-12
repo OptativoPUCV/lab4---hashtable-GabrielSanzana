@@ -80,7 +80,6 @@ void eraseMap(HashMap * map,  char * key) {
       return;
   
   size_t index = hash(key, map->capacity);
-  size_t index_inicial = index;
   
   while(map->buckets[index]!=NULL && strcmp(map->buckets[index]->key, key) != 0) 
   {
