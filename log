@@ -283,3 +283,13 @@ Wed 12 Apr 2023 07:11:07 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 f5eeddd
+Wed 12 Apr 2023 07:14:28 PM UTC: 
+ hashmap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:91:81: error: expected statement before ‘)’ token
+   91 |   if (map->buckets[index] != NULL && strcmp(map->buckets[index]->key, key) == 0))
+      |                                                                                 ^
+Compilation failed
+bfe93c2
