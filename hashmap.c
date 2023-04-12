@@ -102,7 +102,7 @@ Pair * searchMap(HashMap * map,  char * key) {
       return NULL;
   
   size_t index = hash(key, map->capacity);
-  size_t index_inicial = index;
+  
    while(map->buckets[index]!=NULL)
    {
     if (map->buckets[index] != NULL) {

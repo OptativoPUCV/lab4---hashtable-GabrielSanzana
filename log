@@ -229,3 +229,14 @@ hashmap.c:52:20: error: ‘index’ may be used uninitialized in this function [
 cc1: all warnings being treated as errors
 Compilation failed
 0475ec4
+Wed 12 Apr 2023 06:49:56 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:52:20: error: ‘index’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   52 |     size_t index = hash((char *) index, map->capacity);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4035cb3
