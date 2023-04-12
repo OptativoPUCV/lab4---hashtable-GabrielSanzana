@@ -49,7 +49,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   while (map->buckets[index] != NULL && map->buckets[index]->key != NULL && strcmp(map->buckets[index]->key, key) != 0) 
   {
     index++;
-    size_t index = hash((char *) index, map->capacity);
+    index = hash((char *) index, map->capacity);
     if (index == index_inicial)
       return;
   }
