@@ -92,7 +92,7 @@ void eraseMap(HashMap * map,  char * key) {
   
   size_t index = hash(key, map->capacity);
   
-  while(map->buckets[index]!=NULL && strcmp(map->buckets[index]->key, key) != 0) 
+  while(map->buckets[index]!=NULL && is_equal(map->buckets[index]->key,key)!=1) 
   {
      index = (index + 1) % map->capacity;
      if (index == hash(key, map->capacity))
@@ -113,7 +113,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   
   size_t index = hash(key, map->capacity);
   
-   while(map->buckets[index]!=NULL && strcmp(map->buckets[index]->key, key) != 0) 
+   while(map->buckets[index]!=NULL && is_equal(map->buckets[index]->key,key)!=1) 
    {
       index = (index + 1) % map->capacity;
       if (index == hash(key, map->capacity))
